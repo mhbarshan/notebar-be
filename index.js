@@ -6,7 +6,7 @@ var cors = require('cors')
 
 connectToMongo();
 const app = express()
-const host = "https://notebar-be.onrender.com" 
+const port = 5000 
 
 app.use(cors())
 app.use(express.json())
@@ -17,6 +17,6 @@ app.use('/api/notes', require('./routes/notes'))
 
 
 
-app.listen(host, () => {
-  console.log(`NoteBar Backend listening on port ${host}`)
+app.listen(port, () => {
+  console.log(`NoteBar Backend listening on port https://notebar-be.onrender.com:${port}`)
 })
